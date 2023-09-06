@@ -35,6 +35,8 @@ class DashboardController extends AbstractDashboardController
         return $this->render('admin/my-dashboard.html.twig');
     }
 
+    
+
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
@@ -63,4 +65,6 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToRoute('Accueil du site', 'fa fa-igloo', 'home_index')
         ];
     }
+
+    
 }
