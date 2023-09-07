@@ -42,6 +42,11 @@ class Commande
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $dateEnregistrement = null;
 
+    // public function __construct()
+    // {
+    //     $this->dateEnregistrement = new \DateTimeInterface();
+    // }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -154,4 +159,5 @@ class Commande
 
         return $this;
     }
+
 }

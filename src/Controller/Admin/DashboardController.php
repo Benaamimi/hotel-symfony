@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\User;
 use App\Entity\Chambre;
+use App\Entity\Commande;
 use App\Entity\Slider;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -54,11 +55,14 @@ class DashboardController extends AbstractDashboardController
             MenuItem::section('User'),
             MenuItem::linkToCrud('liste des utilisateurs', 'fa fa-user', User::class),
             
-            MenuItem::section('Chambre'),
+            MenuItem::section('Chambres'),
             MenuItem::linkToCrud('liste des chambre', 'fa fa-home', Chambre::class),
            
             MenuItem::section('Slider'),
             MenuItem::linkToCrud('Personaliser le slider', 'fa fa-object-group', Slider::class),
+
+            MenuItem::section('Commandes'),
+            MenuItem::linkToCrud('liste des commandes', 'fa fa-object-group', Commande::class),
            
 
             MenuItem::section('retour au site'),
