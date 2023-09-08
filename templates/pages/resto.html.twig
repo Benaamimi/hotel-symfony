@@ -6,7 +6,7 @@
 {% block body %}
 
 
-	<div class="card text-bg-light rounded-0">
+	<div class="card text-bg-dark rounded-0">
 		<img src="{{asset("img/cuisine.jpg")}}" class="card-img rounded-0" style="opacity: .5;" alt="...">
 		<div class="card-img-overlay">
 			<h1 class="card-title text-center my-5">Restaurant</h1>
@@ -17,26 +17,30 @@
 		</div>
 	</div>
 
-<div class="text-center mt-4 container">
+	<div class="text-center mt-4 container">
+	<h2 class="text-center mt-5">On vous propose</h2>
 
-	<h5>"Le restaurant de notre hôtel est un sanctuaire culinaire où l'élégance rencontre la saveur. Offrant une expérience gastronomique exceptionnelle, notre établissement vous invite à savourer des plats exquis, préparés avec des ingrédients de première qualité, dans une atmosphère chaleureuse et sophistiquée, offrant un service attentionné et des souvenirs inoubliables."</h5>
-</div>
-<div class="container my-4 ">
-	<div class="card text-bg-light shadow-lg" height="50%">
-		<img src="{{asset("img/cuisine2.jpg")}}" class="rounded" style="opacity: .5;" alt="...">
-		<div class="card-img-overlay">
-			<h1 class="card-title text-center mt-5">Gastronomie</h1>
-			<h3 class="card-title text-center mt-5">"La gastronomie du restaurant de cet hôtel marie avec art les saveurs locales et internationales, offrant une expérience culinaire inégalée."</h3>
+		<h5>"Le restaurant de notre hôtel est un sanctuaire culinaire où l'élégance rencontre la saveur. Offrant une expérience gastronomique exceptionnelle, notre établissement vous invite à savourer des plats exquis, préparés avec des ingrédients de première qualité, dans une atmosphère chaleureuse et sophistiquée, offrant un service attentionné et des souvenirs inoubliables."</h5>
+	</div>
+	<div class="container d-flex justify-content-center mt-4">
+		<div class="container my-4 col-6 ml-4 ">
+			<div class="card text-bg-dark shadow-lg" height="50%">
+				<img src="{{asset("img/cuisine4.jpg")}}" class="rounded" style="opacity: .6;" alt="...">
+				<div class="card-img-overlay">
+					<h1 class="card-title text-center mt-5">Gastronomie</h1>
+					<h5 class="card-title text-center mt-5">"La gastronomie du restaurant de cet hôtel marie avec art les saveurs locales et internationales, offrant une expérience culinaire inégalée."</h5>
+				</div>
+			</div>
+		</div>
+
+		<div class="container my-4 col-6">
+			<div class="card text-bg-dark shadow-lg" height="50%">
+				<img src="{{asset("img/cuisine1.jpg")}}" class="rounded" style="opacity: .6;" alt="...">
+				<div class="card-img-overlay">
+					<h1 class="card-title text-center mt-5">Table</h1>
+					<h5 class="card-title text-center mt-5">"La table de notre restaurant d'hôtel incarne l'élégance et la délicatesse, offrant une expérience culinaire raffinée dans un cadre chaleureux et sophistiqué."</h5>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
-
-<div class="container mt-5">
-	<div class="card text-bg-light shadow-lg" height="50%">
-		<img src="{{asset("img/cuisine1.jpg")}}" class="rounded" style="opacity: .5;" alt="...">
-		<div class="card-img-overlay">
-			<h1 class="card-title text-center mt-5">Table</h1>
-			<h3 class="card-title text-center mt-5">"La table de notre restaurant d'hôtel incarne l'élégance et la délicatesse, offrant une expérience culinaire raffinée dans un cadre chaleureux et sophistiqué."</h3>
-		</div>
-	</div>
-</div>{% endblock %}
+{% endblock %}

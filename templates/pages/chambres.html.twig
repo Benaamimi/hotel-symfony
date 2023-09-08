@@ -34,7 +34,7 @@
 		<div class="container">
 			<div class="mt-4 row gx-3">
 				{% for chambre in chambres %}
-				
+
 					<div class="col-md-3 container">
 						<div class="card border-primary mb-3 rounded shadow-lg my-4" style="max-width: 20rem;">
 							<div class="card-header"><img src="{{ asset("/upload/" ~ chambre.image) }}" alt="" class="img-fluid"></div>
@@ -54,5 +54,8 @@
 
 				{% endfor %}
 
+			</div>
+		</div>
 
-			{% endblock %}
+
+	{% endblock %}
