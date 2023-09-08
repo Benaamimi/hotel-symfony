@@ -41,11 +41,11 @@
 							<div class="card-body">
 								<h4 class="card-title">{{chambre.titre}}</h4>
 								<p class="card-text">{{ chambre.descriptionLongue|slice(0, 100) }}...
-									<a class="" href="{{path('chambre_details', {id: chambre.id})}}">voir plus</a>
+									{# <a class="" href="{{path('chambre_details', {id: chambre.id})}}">voir plus</a> #}
 								</p>
 								<p class="card-text fw-bold">{{ chambre.prixJournalier }}
 									€/jour</p>
-								<a href="{{path('chambre_details', {id: chambre.id})}}" class="btn btn-primary">Reservez</a>
+								<a href="{{path('chambre_details', {id: chambre.id})}}" class="btn btn-outline-primary">Voir details</a>
 								{# <a href="{{path('app_commande')}}" class="btn btn-primary">Reservez</a> #}
 								{# <a href="{{path('orders_add')}}" class="btn btn-success">commander</a> #}
 							</div>
