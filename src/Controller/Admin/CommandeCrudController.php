@@ -7,6 +7,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
 class CommandeCrudController extends AbstractCrudController
@@ -25,11 +26,10 @@ class CommandeCrudController extends AbstractCrudController
             TextField::new('prenom', 'Prenom'),
             TextField::new('email', 'E-mail'),
             TextField::new('telephone', 'Numero de téléphone'),
-            
-            TextField::new('titre', 'Chambre'),
-           
-            DateTimeField::new('dateArrivee', "Date d'arrivee")->setFormat('dd.MM.yyyy à HH:mm:ss'),
-            DateTimeField::new('dateDepart', "Date de depart")->setFormat('dd.MM.yyyy à HH:mm:ss'),
+            // TextField::new('titre', 'Chambre'),
+            AssociationField::new('chambre', 'Chambres')->renderAsNativeWidget(),
+            DateTimeField::new('dateArrivee', "Date d'arrivee")->setFormat('dd.MM.yyyy'),
+            DateTimeField::new('dateDepart', "Date de depart")->setFormat('dd.MM.yyyy'),
             IntegerField::new('pixTotal','Prix par nuit'),   
             DateTimeField::new('dateEnregistrement', "Date d'enregistrement")->hideOnForm()->setFormat('dd.MM.yyyy à HH:mm:ss'),
 

@@ -13,22 +13,18 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class CommandeController extends AbstractController
 {
     #[Route('/commande', name: 'app_commande')]
-    // public function commande(): Response
-    // {
-    //     return $this->render('commande/index.html.twig');
-    // }
-
-    public function form(Commande $commande = null, EntityManagerInterface $manager, Request $rq)
+    public function commande(Commande $commande = null, EntityManagerInterface $manager, Request $rq): Response
     {
         if (!$commande) {
             $commande = new Commande;
             $commande->setDateEnregistrement(new \DateTime());
         }
-        $form = $this->createForm(CommandeType::class, $commande);
+        $form = $this->createForm(CommandeType::class, $commande, ['chambre' => true]);
 
         $form->handleRequest($rq);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            
             $depart = $commande->getDateArrivee();
 
             if ($depart->diff($commande->getDateDepart())->invert == 1) {

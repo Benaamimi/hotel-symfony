@@ -1,7 +1,51 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Detente{% endblock %}
+{% block title %}Detente
+{% endblock %}
 
 {% block body %}
-<h1 class="my-4 text-center">Détente</h1>
+
+	<div class="card text-bg-dark rounded-0">
+		<img src="{{asset("img/spa-bg.jpg")}}" class="card-img rounded-0" style="opacity: .5;" alt="...">
+		<div class="card-img-overlay">
+			<h1 class="card-title text-center my-5">Detente</h1>
+			<h4 class="text-center fw-bold my-5">"Le restaurant de l'hôtel propose une cuisine raffinée dans un cadre élégant, offrant une expérience gastronomique exceptionnelle."</h4>
+			<div class="d-flex justify-content-center">
+				<a href="{{path('app_commande')}}" class="btn btn-light my-4 text-center ">Reservation</a>
+			</div>
+		</div>
+	</div>
+	<div class="container my-4 text-center">
+		<h5>"L'espace détente de cet hôtel est un havre de tranquillité. Offrant un mélange parfait de confort et de sérénité, il comprend un spa luxueux, une piscine relaxante, des équipements de remise en forme de pointe et des espaces de détente, créant ainsi une expérience de bien-être ultime pour nos clients."</h5>
+	</div>
+
+	<div class="container my-4 ">
+		<div class="card text-bg-dark shadow-lg" height="50%">
+			<img src="{{asset("img/spa2.jpg")}}" class="rounded" style="opacity: .5;" alt="...">
+			<div class="card-img-overlay">
+				<h1 class="card-title text-center mt-5">Hammam</h1>
+				<h3 class="card-title text-center mt-5">"L'hammam de l'hôtel est un refuge de détente où l'élégance rencontre la relaxation, offrant une expérience authentique du bien-être avec ses bains de vapeur apaisants et son ambiance apaisante."</h3>
+			</div>
+		</div>
+	</div>
+
+	<div class="container mt-5">
+		<div class="card text-bg-dark shadow-lg" height="50%">
+			<img src="{{asset("img/spa1.jpg")}}" class="rounded" style="opacity: .5;" alt="...">
+			<div class="card-img-overlay">
+				<h1 class="card-title text-center mt-5">Massage</h1>
+				<h3 class="card-title text-center mt-5">"Les massages de l'hôtel sont une expérience de bien-être exceptionnelle, offrant un soulagement total du stress et des tensions grâce à des thérapies expertes et des environnements relaxants."</h3>
+			</div>
+		</div>
+	</div>
+	<div class="container mt-5">
+		<div class="card text-bg-dark shadow-lg" height="50%">
+			<img src="{{asset("img/spa3.jpg")}}" class="rounded" style="opacity: .5;" alt="...">
+			<div class="card-img-overlay">
+				<h1 class="card-title text-center mt-5">Bassin chaux</h1>
+				<h3 class="card-title text-center mt-5">"Les bassins de chaux de cet hôtel sont des espaces de relaxation uniques, offrant une immersion rafraîchissante dans des eaux minérales chaudes et apaisantes, favorisant la détente et le ressourcement."</h3>
+			</div>
+		</div>
+	</div>
+
 {% endblock %}

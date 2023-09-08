@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	{{ chambre.titre }}
+{% endblock %}
+
+{% block body %}
+	<div class="container mt-5">
+		<div class="w-50 card p-5 rounded mx-auto my-4 shadow-lg">
+			<div class="card-header text-center"><img class="img-fluid" src="{{ asset("/upload/" ~ chambre.image) }}" alt=""></div>
+			<div class="card-body">
+				<h4 class="card-title text-center fw-bolder">{{ chambre.titre}}</h4>
+				<p class="card-text text-center fw-light">{{ chambre.descriptionLongue }}</p>
+				<h4 class="card-text text-center fw-light">{{ chambre.prixJournalier }} €</h4>
+
+				{{ form_start(formChambre) }}
+					{{ form_row(formChambre.dateArrivee) }}
+					{{ form_row(formChambre.dateDepart) }}
+					{{ form_row(formChambre.nom) }}
+					{{ form_row(formChambre.prenom) }}
+					{{ form_row(formChambre.email) }}
+					{{ form_row(formChambre.telephone) }}
+					<button type="submit" class="btn btn-primary my-4">Reservez</button>
+				{{ form_end(formChambre) }}
+
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

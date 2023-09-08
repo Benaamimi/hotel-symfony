@@ -9,13 +9,18 @@
 			{{ message }}
 		</div>
 	{% endfor %}
-	<div id="video" class="position-relative">
-		<video autoplay loop muted class="d-block w-100" src="{{asset("video/hotel.mp4")}}"></video>
-		<div class="position-absolute top-50 start-50 translate-middle text-center">
-			<h1 class="my-4 text-center text-light">Accueil</h1>
-			<p class="text-light text-center fw-bold">L'hôtel de luxe offre un raffinement exceptionnel, chambres somptueuses, gastronomie exquise, spa exclusif, service personnalisé, et vue imprenable.</p>
 
-			<a href="{{path('app_commande')}}" class="btn btn-light my-4 ">Réservation</a>
+
+	<div class="card text-bg-dark rounded-0">
+		<video autoplay loop muted class="d-block w-100" style="opacity: .6;" src="{{asset("video/video-accueil.mp4")}}"></video>
+		<div class="card-img-overlay">
+			<div class="d-flex justify-content-center flex-column align-self-center container">
+				<h1 class="my-4 text-center mt-5">Accueil</h1>
+				<h3 class="text-center my-5">" L'hôtel de luxe offre un raffinement exceptionnel, chambres somptueuses, gastronomie exquise, spa exclusif, service personnalisé, et vue imprenable. "</h3>
+				<div class="d-flex justify-content-center">
+				<a href="{{path('app_commande')}}" class="btn btn-light mt-5 text-center ">Reservation</a>
+				</div>
+			</div>
 
 
 		</div>

@@ -1,7 +1,42 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Restaurant{% endblock %}
+{% block title %}Restaurant
+{% endblock %}
 
 {% block body %}
-<h1 class="my-4 text-center">Réstaurant</h1>
-{% endblock %}
+
+
+	<div class="card text-bg-light rounded-0">
+		<img src="{{asset("img/cuisine.jpg")}}" class="card-img rounded-0" style="opacity: .5;" alt="...">
+		<div class="card-img-overlay">
+			<h1 class="card-title text-center my-5">Restaurant</h1>
+			<h4 class="text-center fw-bold my-5">"Le restaurant de l'hôtel propose une cuisine raffinée dans un cadre élégant, offrant une expérience gastronomique exceptionnelle."</h4>
+			<div class="d-flex justify-content-center">
+				<a href="{{path('app_commande')}}" class="btn btn-light my-4 text-center ">Reservation</a>
+			</div>
+		</div>
+	</div>
+
+<div class="text-center mt-4 container">
+
+	<h5>"Le restaurant de notre hôtel est un sanctuaire culinaire où l'élégance rencontre la saveur. Offrant une expérience gastronomique exceptionnelle, notre établissement vous invite à savourer des plats exquis, préparés avec des ingrédients de première qualité, dans une atmosphère chaleureuse et sophistiquée, offrant un service attentionné et des souvenirs inoubliables."</h5>
+</div>
+<div class="container my-4 ">
+	<div class="card text-bg-light shadow-lg" height="50%">
+		<img src="{{asset("img/cuisine2.jpg")}}" class="rounded" style="opacity: .5;" alt="...">
+		<div class="card-img-overlay">
+			<h1 class="card-title text-center mt-5">Gastronomie</h1>
+			<h3 class="card-title text-center mt-5">"La gastronomie du restaurant de cet hôtel marie avec art les saveurs locales et internationales, offrant une expérience culinaire inégalée."</h3>
+		</div>
+	</div>
+</div>
+
+<div class="container mt-5">
+	<div class="card text-bg-light shadow-lg" height="50%">
+		<img src="{{asset("img/cuisine1.jpg")}}" class="rounded" style="opacity: .5;" alt="...">
+		<div class="card-img-overlay">
+			<h1 class="card-title text-center mt-5">Table</h1>
+			<h3 class="card-title text-center mt-5">"La table de notre restaurant d'hôtel incarne l'élégance et la délicatesse, offrant une expérience culinaire raffinée dans un cadre chaleureux et sophistiqué."</h3>
+		</div>
+	</div>
+</div>{% endblock %}
