@@ -18,6 +18,7 @@ class CommandeController extends AbstractController
         if (!$commande) {
             $commande = new Commande;
             $commande->setDateEnregistrement(new \DateTime());
+            
         }
         $form = $this->createForm(CommandeType::class, $commande, ['chambre' => true]);
 

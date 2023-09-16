@@ -16,7 +16,7 @@
 
 					<div class="container">
 						<h1 class="my-4 text-center">Nos chambres</h1>
-						<h5 class="text-center fw-bold">"Nos chambres d'hôtel vous offrent un confort moderne et une élégance raffinée. Choisissez entre nos chambres standard, suites de luxe ou chambres familiales pour un séjour mémorable."</h5>
+						<h5 class="text-center fw-bold text">"Nos chambres d'hôtel vous offrent un confort moderne et une élégance raffinée. Choisissez entre nos chambres standard, suites de luxe ou chambres familiales pour un séjour mémorable."</h5>
 					</div>
 				</div>
 			{% endfor %}
@@ -40,7 +40,7 @@
 							<div class="card-header"><img src="{{ asset("/upload/" ~ chambre.image) }}" alt="" class="img-fluid"></div>
 							<div class="card-body">
 								<h4 class="card-title">{{chambre.titre}}</h4>
-								<p class="card-text">{{ chambre.descriptionLongue|slice(0, 100) }}...
+								<p class="card-text text">{{ chambre.descriptionLongue|slice(0, 100) }}...
 									{# <a class="" href="{{path('chambre_details', {id: chambre.id})}}">voir plus</a> #}
 								</p>
 								<p class="card-text fw-bold">{{ chambre.prixJournalier }}

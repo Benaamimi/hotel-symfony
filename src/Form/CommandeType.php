@@ -25,16 +25,32 @@ class CommandeType extends AbstractType
             ]);
         }
         $builder
-            ->add('dateArrivee', DateType::class, array(
-                "widget" => 'single_text',
-                "format" => 'yyyy-MM-dd',
-                "data" => new \DateTime()
-            ))
-            ->add('dateDepart',  DateType::class, array(
-                "widget" => 'single_text',
-                "format" => 'yyyy-MM-dd',
-                "data" => new \DateTime()
-            ))
+            // ->add('dateArrivee', DateType::class, array(
+            //     "widget" => 'single_text',
+            //     "format" => 'yyyy-MM-dd',
+            //     "data" => new \DateTime()
+            // ))
+            // ->add('dateDepart',  DateType::class, array(
+            //     "widget" => 'single_text',
+            //     "format" => 'yyyy-MM-dd',
+            //     "data" => new \DateTime()
+            // ))
+
+            ->add('dateArrivee', DateTimeType::class, [
+                'widget' => 'single_text',  // permet de choisir l'affichage d'un calendrier (voir doc datetimetype)
+                'attr' => [
+                    'min' => (new \DateTime())->format('Y-m-d H:i'), // permet d'empecher de choisir une date ultérieure à celle d'aujourd'hui (voir doc datetime)
+                ]
+            ])
+            ->add('dateDepart', DateTimeType::class, [
+                'widget' => 'single_text',  // permet de choisir l'affichage d'un calendrier (voir doc datetimetype)
+                'attr' => [
+                    'min' => (new \DateTime())->format('Y-m-d H:i'), // permet d'empecher de choisir une date ultérieure à celle d'aujourd'hui (voir doc datetime)
+                ]
+            ])
+
+            
+            
             ->add('nom')
             ->add('prenom', TextType::class, ['label' => 'Prénom'])
             ->add('email')
@@ -42,7 +58,7 @@ class CommandeType extends AbstractType
 
             // ->add('pixTotal')
             // ->add('dateEnregistrement')
-            
+
             // ->add('submit', SubmitType::class, [
             //     'attr' => [
             //         'class' => 'btn btn-primary mt-4'
@@ -50,7 +66,7 @@ class CommandeType extends AbstractType
             //     'label' => 'reservez'
 
             // ])
-            ;
+        ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void

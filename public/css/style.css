@@ -1,0 +1,21 @@
+.text{
+    font-style: italic;
+    font-weight: lighter;
+}
+
+/* .card-content{
+    display: flex;
+
+}
+
+.titre{
+    font-size: 4rem;
+} */
+
+.head{
+    height: 70px; 
+}
+
+.head li{
+    font-size: 0.7rem;
+} 
